@@ -1,0 +1,36 @@
+package testscript;
+
+import java.io.IOException;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import pages.LoginPage;
+import pages.ManageCategoryPage;
+import utilities.ExcelUtility;
+
+public class ManageCategoryTest extends Base{
+	@Test
+public void verifyUserCanCreateNewCategory() throws IOException
+{
+	String username=ExcelUtility.getStringData(1, 0, "Loginpage");
+	String password=ExcelUtility.getStringData(1, 1, "Loginpage");
+	
+	LoginPage loginpage=new LoginPage(driver);
+	loginpage.enterTheUserName(username);
+	loginpage.enterThePassword(password);
+	loginpage.clickTheSignin();
+	
+	ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
+	managecategorypage.clickMoreinfo();
+	managecategorypage.clickTheNewButton();
+	
+	String Category=ExcelUtility.getStringData(1, 0, "ManageCategory");
+	
+	managecategorypage.enterCategory(Category);
+	managecategorypage.chooseFileToUploadImage();
+	boolean save=managecategorypage.isSaveButtonClicked();
+	Assert.assertTrue(save);
+	System.out.println("Save Button Is displayed");
+}
+}
