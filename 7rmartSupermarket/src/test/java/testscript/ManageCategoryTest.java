@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
 import utilities.ExcelUtility;
@@ -30,7 +31,7 @@ public void verifyUserCanCreateNewCategory() throws IOException
 	managecategorypage.enterCategory(Category);
 	managecategorypage.chooseFileToUploadImage();
 	boolean save=managecategorypage.isSaveButtonClicked();
-	Assert.assertTrue(save);
+	Assert.assertTrue(save,Constant.ADDCATEGORY);
 	System.out.println("Save Button Is displayed");
 }
 }

@@ -38,7 +38,7 @@ public class LoginTest extends Base {
 	   loginpage.enterThePassword(password);
 	   loginpage.clickTheSignin();
 	   boolean alert=loginpage.isAlertloaded();
-	   Assert.assertTrue(alert);
+	   Assert.assertTrue(alert,Constant.INVALIDPASSWORD);
 	}
 		@Test
 	public void verifyTheUserisAbleToLoginWithInValidUsername() throws IOException
@@ -52,7 +52,7 @@ public class LoginTest extends Base {
 		loginpage.enterThePassword(password);
 		loginpage.clickTheSignin();
 		boolean alert=loginpage.isAlertloaded();
-		Assert.assertTrue(alert);	
+		Assert.assertTrue(alert,Constant.INVALIDUSERNAME);	
 	}
 		@Test(dataProvider="LoginProvider")
 	public void verifyTheUserisAbleToLoginWithInValidCredentials(String username, String password) throws IOException
@@ -66,7 +66,7 @@ public class LoginTest extends Base {
 		loginpage.enterThePassword(password);
 		loginpage.clickTheSignin();
 		boolean alert=loginpage.isAlertloaded();
-		Assert.assertTrue(alert);	
+		Assert.assertTrue(alert,Constant.INVALIDCREDENTIALS);	
 	}
 		@DataProvider(name="LoginProvider") 
 	 	public Object[][] getDataFromTestData() throws IOException{ 

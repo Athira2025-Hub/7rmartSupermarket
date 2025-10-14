@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.ManageFooterTextPage;
 import utilities.ExcelUtility;
@@ -34,6 +35,6 @@ public class ManageFooterTextTest extends Base {
 		managerfootertextpage.enterThePhoneNumber(Phone);
 		managerfootertextpage.clickUpdate();
 		boolean alert=managerfootertextpage.isAlertLoaded();
-		Assert.assertTrue(alert);
+		Assert.assertTrue(alert,Constant.UPDATEFOOTER);
 	}
 }

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.ManageContactPage;
 import utilities.ExcelUtility;
@@ -38,6 +39,6 @@ public void verifyTheUserIsAbleToManageContact() throws IOException
 	managecontactpage.enterDeliveryChargeLimit(DeliveryChargeLimit);
 	managecontactpage.clickUpdate();
 	boolean alert=managecontactpage.isAlertLoaded();
-	Assert.assertTrue(alert);
+	Assert.assertTrue(alert,Constant.UPDATECONTACT);
 }
 }
