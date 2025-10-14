@@ -1,0 +1,9 @@
+testscript\LoginTest.class
+testscript\LogoutTest.class
+testscript\ManageCategoryTest.class
+testscript\Base.class
+generatereport\Listners.class
+testscript\NewsTest.class
+testscript\ManageContactTest.class
+testscript\ManageFooterTextTest.class
+testscript\AdminUserTest.class
