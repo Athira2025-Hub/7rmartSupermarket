@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.WaitUtilities;
+
 public class ManageFooterTextPage {
 @FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-footertext']") WebElement moreinfo;
 @FindBy(css="a[href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1']") WebElement action;
@@ -44,6 +46,8 @@ public void enterThePhoneNumber(String Phone)
 }
 public void clickUpdate()
 {
+	WaitUtilities waitutilities=new WaitUtilities();
+	waitutilities.waitForElement(driver, update);
 	update.click();
 }
 public boolean isAlertLoaded()
