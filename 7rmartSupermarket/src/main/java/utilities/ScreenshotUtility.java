@@ -12,7 +12,7 @@ import org.openqa.selenium.io.FileHandler;
                                                                                                     //interface for screenshot: TakesScreenshot
                                              
 
-public class ScreenshotUtility {
+public class ScreenshotUtility {                                                                   //capture failed TC
 	 public void getScreenShot(WebDriver driver, String failedTestCase) throws IOException { 
 	 		TakesScreenshot scrShot = (TakesScreenshot) driver;                                    // TakesScreenshot capture the current situation of the 
 	 															                                   // browser 

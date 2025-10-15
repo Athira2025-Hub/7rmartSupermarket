@@ -2,8 +2,10 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import pages.LogoutPage;
 import utilities.ExcelUtility;
@@ -23,5 +25,7 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 	    LogoutPage logoutpage=new LogoutPage(driver);
 	    logoutpage.clickTheAdmin();
 	    logoutpage.clickTheLogout();
+	    boolean signin=logoutpage.isLoginPageDisplayed();
+	    Assert.assertTrue(signin, Constant.LOGOUTFROMPAGE);
 }
 }

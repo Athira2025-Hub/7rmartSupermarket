@@ -11,7 +11,7 @@ import com.aventstack.extentreports.Status;
 
 import utilities.ExtendReportUtility;
 
-public class Listners implements ITestListener { 
+public class Listners implements ITestListener {                                            //customize our report
 	ExtentTest test; 
 	  
  	ExtentReports extent = ExtendReportUtility.createExtentReports(); 
@@ -85,7 +85,7 @@ public class Listners implements ITestListener {
  	public void onFinish(ITestContext context) { 
   
  		ITestListener.super.onFinish(context); 
- 		extent.flush();   //flush to generate report flush method  should call
+ 		extent.flush();   //flush to generate report, flush method should call
  		
  	}
 }

@@ -23,5 +23,8 @@ public void clickTheLogout()
 {
 	logout.click();
 }
-
+public boolean isLoginPageDisplayed()
+{
+	return signin.isDisplayed();	
+}
 }

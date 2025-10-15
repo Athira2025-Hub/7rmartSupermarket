@@ -3,7 +3,7 @@ package utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class ExtendReportUtility {
+public class ExtendReportUtility {                                                   //to generate detailed html extended reports
 	 public static final ExtentReports extentReports = new ExtentReports(); 
 	  
 	 	public synchronized static ExtentReports createExtentReports() { 
