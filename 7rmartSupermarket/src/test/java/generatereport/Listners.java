@@ -11,7 +11,7 @@ import com.aventstack.extentreports.Status;
 
 import utilities.ExtendReportUtility;
 
-public class Listners implements ITestListener {                                            //customize our report
+public class Listners implements ITestListener {                                           //customize our report
 	ExtentTest test; 
 	  
  	ExtentReports extent = ExtendReportUtility.createExtentReports(); 
