@@ -35,29 +35,34 @@ public HomePage clickTheSignin()
 	return new HomePage(driver);
 }
 
-public void clickTheMoreinfoadminuser()
+public HomePage clickTheMoreinfoadminuser()
 {
 	adminusermoreinfo.click();
+	return new HomePage(driver);
 }
 
-public void clickMoreinfomanagecategory()
+public HomePage clickMoreinfomanagecategory()
 {
 	managecategorymoreinfo.click();
+	return new HomePage(driver);
 }
 
-public void clickThemoreinfomanagecontact()
+public HomePage clickThemoreinfomanagecontact()
 {
 	managecontactmoreinfo.click();
+	return new HomePage(driver);
 }
 
-public void clickMoreinfomanagefootertext()
+public HomePage clickMoreinfomanagefootertext()
 {
 	managefootertextmoreinfo.click();
+	return new HomePage(driver);
 }
 
-public void clickThemoreinfomanagenews()
+public HomePage clickThemoreinfomanagenews()
 {
 	managenewsmoreinfo.click();
+	return new HomePage(driver);
 }
 
 public HomePage clickTheAdmin()

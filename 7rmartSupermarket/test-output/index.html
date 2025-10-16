@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,36 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyTheUserisAbleToLoginWithInValidCredentials(admin51, admin51)">verifyTheUserisAbleToLoginWithInValidCredentials(admin51, admin51)</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscript.HomeTest" class="method navigator-link" hash-for-method="verifyTheUserIsAbleToLogout">verifyTheUserIsAbleToLogout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyTheUserisAbleToLoginWithInValidPassword">verifyTheUserisAbleToLoginWithInValidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyTheUserisAbleToLoginWithInValidUsername">verifyTheUserisAbleToLoginWithInValidUsername</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyTheUserisAbleToLoginWithValidCredentials">verifyTheUserisAbleToLoginWithValidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -133,43 +118,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testscript.LoginTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testscript.HomeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyTheUserisAbleToLoginWithInValidCredentials(admin51, admin51)">
-                  </a> <!-- verifyTheUserisAbleToLoginWithInValidCredentials(admin51, admin51) -->
-                  <span class="method-name">verifyTheUserisAbleToLoginWithInValidCredentials</span>
-                  <span class="parameters">(admin51,admin51)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTheUserisAbleToLoginWithInValidPassword">
-                  </a> <!-- verifyTheUserisAbleToLoginWithInValidPassword -->
-                  <span class="method-name">verifyTheUserisAbleToLoginWithInValidPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTheUserisAbleToLoginWithInValidUsername">
-                  </a> <!-- verifyTheUserisAbleToLoginWithInValidUsername -->
-                  <span class="method-name">verifyTheUserisAbleToLoginWithInValidUsername</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTheUserisAbleToLoginWithValidCredentials">
-                  </a> <!-- verifyTheUserisAbleToLoginWithValidCredentials -->
-                  <span class="method-name">verifyTheUserisAbleToLoginWithValidCredentials</span>
+                  <a name="verifyTheUserIsAbleToLogout">
+                  </a> <!-- verifyTheUserIsAbleToLogout -->
+                  <span class="method-name">verifyTheUserIsAbleToLogout</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pages.HomePage.clickTheSignin()&quot; because &quot;this.homepage&quot; is null
+	at testscript.HomeTest.verifyTheUserIsAbleToLogout(HomeTest.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -180,13 +148,10 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;generatereport.Listners&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscript.LoginTest&quot;/&gt;
+      &lt;class name=&quot;testscript.HomeTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -210,14 +175,6 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">regression</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">verifyTheUserisAbleToLoginWithValidCredentials</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -234,28 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyTheUserisAbleToLoginWithValidCredentials')
-data.setCell(0, 2, 'testscript.LoginTest')
-data.setCell(0, 3, 2067);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyTheUserisAbleToLoginWithInValidCredentials')
-data.setCell(1, 2, 'testscript.LoginTest')
-data.setCell(1, 3, 1216);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyTheUserisAbleToLoginWithInValidPassword')
-data.setCell(2, 2, 'testscript.LoginTest')
-data.setCell(2, 3, 1018);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyTheUserisAbleToLoginWithInValidUsername')
-data.setCell(3, 2, 'testscript.LoginTest')
-data.setCell(3, 3, 874);
+data.setCell(0, 1, 'verifyTheUserIsAbleToLogout')
+data.setCell(0, 2, 'testscript.HomeTest')
+data.setCell(0, 3, 2418);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -281,54 +226,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testscript.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscript.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserinitialisation(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyTheUserisAbleToLoginWithInValidCredentials(admin51, admin51)</span>
-                <span class="method-start">9207 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyTheUserIsAbleToLogout</span>
+                <span class="method-start">5586 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=verifyTheUserisAbleToLoginWithInValidCredentials status=SUCCESS method=LoginTest.ve...)</span>
-                <span class="method-start">10433 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">browserinitialisation(Chrome)</span>
-                <span class="method-start">10927 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyTheUserisAbleToLoginWithInValidPassword</span>
-                <span class="method-start">14558 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=verifyTheUserisAbleToLoginWithInValidPassword status=SUCCESS method=LoginTest.verif...)</span>
-                <span class="method-start">15589 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">browserinitialisation(Chrome)</span>
-                <span class="method-start">16094 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyTheUserisAbleToLoginWithInValidUsername</span>
-                <span class="method-start">18896 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=verifyTheUserisAbleToLoginWithInValidUsername status=SUCCESS method=LoginTest.verif...)</span>
-                <span class="method-start">19775 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">browserinitialisation(Chrome)</span>
-                <span class="method-start">20172 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyTheUserisAbleToLoginWithValidCredentials</span>
-                <span class="method-start">22925 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">browserQuit([TestResult name=verifyTheUserisAbleToLoginWithValidCredentials status=SUCCESS method=LoginTest.veri...)</span>
-                <span class="method-start">25005 ms</span>
+                <span class="method-name">browserQuit([TestResult name=verifyTheUserIsAbleToLogout status=FAILURE method=HomeTest.verifyTheUserIsAbleToLog...)</span>
+                <span class="method-start">8009 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

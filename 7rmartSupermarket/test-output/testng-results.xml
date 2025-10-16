@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-14T09:57:08 IST" name="Suite" finished-at="2025-10-14T09:57:36 IST" duration-ms="27365">
+  <suite started-at="2025-10-16T12:04:53 IST" name="Suite" finished-at="2025-10-16T12:05:01 IST" duration-ms="8623">
     <groups>
-      <group name="regression">
-        <method signature="LoginTest.verifyTheUserisAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginTest@41f69e84]" name="verifyTheUserisAbleToLoginWithValidCredentials" class="testscript.LoginTest"/>
-      </group> <!-- regression -->
     </groups>
-    <test started-at="2025-10-14T09:57:08 IST" name="Test" finished-at="2025-10-14T09:57:36 IST" duration-ms="27365">
-      <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="browserinitialisation(java.lang.String)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:10 IST" name="browserinitialisation" finished-at="2025-10-14T09:57:19 IST" duration-ms="9200" status="PASS">
+    <test started-at="2025-10-16T12:04:53 IST" name="Test" finished-at="2025-10-16T12:05:01 IST" duration-ms="8623">
+      <class name="testscript.HomeTest">
+        <test-method is-config="true" signature="browserinitialisation(java.lang.String)[pri:0, instance:testscript.HomeTest@40a4337a]" started-at="2025-10-16T12:04:53 IST" name="browserinitialisation" finished-at="2025-10-16T12:04:58 IST" duration-ms="5576" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,112 +18,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserinitialisation -->
-        <test-method signature="verifyTheUserisAbleToLoginWithInValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:19 IST" name="verifyTheUserisAbleToLoginWithInValidCredentials" data-provider="LoginProvider" finished-at="2025-10-14T09:57:21 IST" duration-ms="1216" status="PASS">
+        <test-method signature="verifyTheUserIsAbleToLogout()[pri:0, instance:testscript.HomeTest@40a4337a]" started-at="2025-10-16T12:04:58 IST" name="verifyTheUserIsAbleToLogout" finished-at="2025-10-16T12:05:01 IST" duration-ms="2418" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "pages.HomePage.clickTheSignin()" because "this.homepage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "pages.HomePage.clickTheSignin()" because "this.homepage" is null
+at testscript.HomeTest.verifyTheUserIsAbleToLogout(HomeTest.java:26)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToLogout -->
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.HomeTest@40a4337a]" started-at="2025-10-16T12:05:01 IST" name="browserQuit" finished-at="2025-10-16T12:05:01 IST" duration-ms="546" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin51]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[admin51]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginWithInValidCredentials -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:21 IST" name="browserQuit" finished-at="2025-10-14T09:57:21 IST" duration-ms="490" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTheUserisAbleToLoginWithInValidCredentials status=SUCCESS method=LoginTest.verifyTheUserisAbleToLoginWithInValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscript.LoginTest@41f69e84] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserinitialisation(java.lang.String)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:21 IST" name="browserinitialisation" finished-at="2025-10-14T09:57:25 IST" duration-ms="3631" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserinitialisation -->
-        <test-method signature="verifyTheUserisAbleToLoginWithInValidPassword()[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:25 IST" name="verifyTheUserisAbleToLoginWithInValidPassword" finished-at="2025-10-14T09:57:26 IST" duration-ms="1018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginWithInValidPassword -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:26 IST" name="browserQuit" finished-at="2025-10-14T09:57:26 IST" duration-ms="505" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTheUserisAbleToLoginWithInValidPassword status=SUCCESS method=LoginTest.verifyTheUserisAbleToLoginWithInValidPassword()[pri:0, instance:testscript.LoginTest@41f69e84] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserinitialisation(java.lang.String)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:26 IST" name="browserinitialisation" finished-at="2025-10-14T09:57:29 IST" duration-ms="2801" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserinitialisation -->
-        <test-method signature="verifyTheUserisAbleToLoginWithInValidUsername()[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:29 IST" name="verifyTheUserisAbleToLoginWithInValidUsername" finished-at="2025-10-14T09:57:30 IST" duration-ms="874" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginWithInValidUsername -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:30 IST" name="browserQuit" finished-at="2025-10-14T09:57:30 IST" duration-ms="391" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTheUserisAbleToLoginWithInValidUsername status=SUCCESS method=LoginTest.verifyTheUserisAbleToLoginWithInValidUsername()[pri:0, instance:testscript.LoginTest@41f69e84] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToLogout status=FAILURE method=HomeTest.verifyTheUserIsAbleToLogout()[pri:0, instance:testscript.HomeTest@40a4337a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserinitialisation(java.lang.String)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:30 IST" name="browserinitialisation" finished-at="2025-10-14T09:57:33 IST" duration-ms="2741" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserinitialisation -->
-        <test-method signature="verifyTheUserisAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:33 IST" name="verifyTheUserisAbleToLoginWithValidCredentials" finished-at="2025-10-14T09:57:35 IST" duration-ms="2067" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTheUserisAbleToLoginWithValidCredentials -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.LoginTest@41f69e84]" started-at="2025-10-14T09:57:35 IST" name="browserQuit" finished-at="2025-10-14T09:57:36 IST" duration-ms="686" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTheUserisAbleToLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyTheUserisAbleToLoginWithValidCredentials()[pri:0, instance:testscript.LoginTest@41f69e84] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testscript.LoginTest -->
+      </class> <!-- testscript.HomeTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
