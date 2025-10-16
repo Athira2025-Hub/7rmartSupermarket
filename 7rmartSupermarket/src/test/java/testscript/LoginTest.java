@@ -13,8 +13,6 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
 	
-	LoginPage loginpage;
-	HomePage homepage;
 	
 	@Test(groups="regression")
 	public void verifyTheUserisAbleToLoginWithValidCredentials() throws IOException
@@ -27,7 +25,7 @@ public class LoginTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		//loginpage.enterThePassword(password);
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		boolean homepage=loginpage.isHomepageloaded(); //validation 
 		Assert.assertTrue(homepage,Constant.LOGINVALIDCREDENTIALS); //hard assertion put always last
 	}
@@ -40,7 +38,7 @@ public class LoginTest extends Base {
 		String password=ExcelUtility.getStringData(2, 1, "Loginpage");
 	   LoginPage loginpage=new LoginPage(driver);
 	   loginpage.enterTheUserName(username).enterThePassword(password);
-	   homepage.clickTheSignin();
+	   loginpage.clickTheSignin();
 	   boolean alert=loginpage.isAlertloaded();
 	   Assert.assertTrue(alert,Constant.INVALIDPASSWORD);
 	}
@@ -54,7 +52,7 @@ public class LoginTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		boolean alert=loginpage.isAlertloaded();
 		Assert.assertTrue(alert,Constant.INVALIDUSERNAME);	
 	}
@@ -68,7 +66,7 @@ public class LoginTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		boolean alert=loginpage.isAlertloaded();
 		Assert.assertTrue(alert,Constant.INVALIDCREDENTIALS);	
 	}

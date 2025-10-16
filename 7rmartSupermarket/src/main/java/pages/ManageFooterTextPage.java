@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.WaitUtilities;
 
 public class ManageFooterTextPage {
-@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-footertext']") WebElement moreinfo;
+//@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-footertext']") WebElement moreinfo;
 @FindBy(css="a[href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1']") WebElement action;
 @FindBy(xpath="//textarea[@id='content']") WebElement address;
 @FindBy(xpath="//input[@id='email']") WebElement email;

@@ -25,10 +25,10 @@ public void verifyUserCanCreateNewCategory() throws IOException
 	LoginPage loginpage=new LoginPage(driver);
 	loginpage.enterTheUserName(username).enterThePassword(password);
 	
-	homepage.clickTheSignin();
+	loginpage.clickTheSignin();
 	
 	//ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
-	homepage.clickMoreinfomanagecategory();;
+	managecategorypage=homepage.clickMoreinfomanagecategory();;
 	managecategorypage.clickTheNewButton();
 	
 	String Category=ExcelUtility.getStringData(1, 0, "ManageCategory");

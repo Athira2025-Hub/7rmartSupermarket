@@ -26,10 +26,10 @@ public class ManageFooterTextTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		
 		//ManageFooterTextPage managerfootertextpage=new ManageFooterTextPage(driver);
-		homepage.clickMoreinfomanagefootertext();
+		managefootertextpage=homepage.clickMoreinfomanagefootertext();
 		managefootertextpage.clickTheActionButton();
 		
 		String Address=ExcelUtility.getStringData(1, 0, "ManageFooterText");

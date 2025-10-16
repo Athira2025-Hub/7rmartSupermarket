@@ -26,10 +26,10 @@ public class AdminUserTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		
 		//AdminUserPage adminuserpage=new AdminUserPage(driver);
-		homepage.clickTheMoreinfoadminuser();
+		adminuserpage=homepage.clickTheMoreinfoadminuser();
 		adminuserpage.clickNew();
 		
 		//String UserName=ExcelUtility.getStringData(1, 0, "AdminUser");

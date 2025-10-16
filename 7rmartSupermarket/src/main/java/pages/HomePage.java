@@ -28,45 +28,40 @@ public HomePage(WebDriver driver)
 	PageFactory.initElements(driver, this); //initialize webElements uses initElements method
 }
 
-public HomePage clickTheSignin()
-{
-	signin.click();
-	return new HomePage(driver);
-}
-
-public HomePage clickTheMoreinfoadminuser()
+public AdminUserPage clickTheMoreinfoadminuser()
 {
 	adminusermoreinfo.click();
-	return new HomePage(driver);
+	return new AdminUserPage(driver);
 }
 
-public HomePage clickMoreinfomanagecategory()
+public ManageCategoryPage clickMoreinfomanagecategory()
 {
 	managecategorymoreinfo.click();
-	return new HomePage(driver);
+	return new ManageCategoryPage(driver);
 }
 
-public HomePage clickThemoreinfomanagecontact()
+public ManageContactPage clickThemoreinfomanagecontact()
 {
 	managecontactmoreinfo.click();
-	return new HomePage(driver);
+	return new ManageContactPage(driver);
 }
 
-public HomePage clickMoreinfomanagefootertext()
+public ManageFooterTextPage clickMoreinfomanagefootertext()
 {
 	managefootertextmoreinfo.click();
-	return new HomePage(driver);
+	return new ManageFooterTextPage(driver);
 }
 
-public HomePage clickThemoreinfomanagenews()
+public NewsPage clickThemoreinfomanagenews()
 {
 	managenewsmoreinfo.click();
-	return new HomePage(driver);
+	return new NewsPage(driver);
 }
 
-public void clickTheAdmin()
+public HomePage clickTheAdmin()
 {
 	admin.click();
+	return this;
 	
 }
 public void clickTheLogout()

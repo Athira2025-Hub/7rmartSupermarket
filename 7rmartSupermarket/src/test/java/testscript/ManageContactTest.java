@@ -25,10 +25,10 @@ public void verifyTheUserIsAbleToManageContact() throws IOException
 	LoginPage loginpage=new LoginPage(driver);
 	loginpage.enterTheUserName(username).enterThePassword(password);
 	
-	homepage.clickTheSignin();
+	loginpage.clickTheSignin();
 	
 	//ManageContactPage managecontactpage=new ManageContactPage(driver);
-	homepage.clickThemoreinfomanagecontact();
+	managecontactpage=homepage.clickThemoreinfomanagecontact();
 	managecontactpage.clickAction();
 	
 	String PhoneNumber=ExcelUtility.getIntegerData(1, 0, "ManageContact");

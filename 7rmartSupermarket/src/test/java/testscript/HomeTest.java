@@ -9,7 +9,6 @@ import pages.HomePage;
 import utilities.ExcelUtility;
 
 public class HomeTest extends Base {
-	HomePage homepage;
 	
 	@Test
 public void verifyTheUserIsAbleToLogout() throws IOException 
@@ -20,10 +19,10 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		
-	    //HomePage logoutpage=new HomePage(driver);
-		homepage.clickTheAdmin();
-		homepage.clickTheLogout();
+	    HomePage logoutpage=new HomePage(driver);
+	    logoutpage.clickTheAdmin();
+	    logoutpage.clickTheLogout();
 }
 }

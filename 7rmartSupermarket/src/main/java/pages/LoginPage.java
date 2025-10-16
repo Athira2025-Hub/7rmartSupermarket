@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 	@FindBy (xpath="//input[@placeholder='Username']")WebElement ccusername;
 	@FindBy(xpath="//input[@placeholder='Password']")WebElement ccpw;
-	//@FindBy(xpath="//button[text()='Sign In']")WebElement signin;
+	@FindBy(xpath="//button[text()='Sign In']")WebElement signin;
 	@FindBy(xpath="//p[text()='Dashboard']")WebElement dashboard;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alert;
 	public WebDriver driver;
@@ -27,10 +27,11 @@ public class LoginPage {
 		ccpw.sendKeys(password);
 		return this;
 	}
-	/*public void clickTheSignin()
+	public HomePage clickTheSignin()
 	{
 		signin.click();
-	}*/
+		return new HomePage(driver);
+	}
 	public boolean isHomepageloaded() //for validation
 	{
 		return dashboard.isDisplayed();

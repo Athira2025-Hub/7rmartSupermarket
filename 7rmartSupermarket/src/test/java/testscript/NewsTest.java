@@ -27,9 +27,9 @@ public class NewsTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		homepage.clickTheSignin();
+		loginpage.clickTheSignin();
 		//NewsPage newspage=new NewsPage(driver);
-		homepage.clickThemoreinfomanagenews();
+		newspage=homepage.clickThemoreinfomanagenews();
 		newspage.clickNew().enterTheNews(news).clickTheSave();
 		
 		boolean alert=newspage.isAlertLoaded();
