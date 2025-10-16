@@ -65,15 +65,15 @@ public HomePage clickThemoreinfomanagenews()
 	return new HomePage(driver);
 }
 
-public HomePage clickTheAdmin()
+public void clickTheAdmin()
 {
 	admin.click();
-	return this;
+	
 }
-public HomePage clickTheLogout()
+public void clickTheLogout()
 {
 	logout.click();
-	return this;
+	
 }
 public boolean isLoginPageDisplayed()
 {

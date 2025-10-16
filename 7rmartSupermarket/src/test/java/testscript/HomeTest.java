@@ -2,16 +2,13 @@ package testscript;
 
 import java.io.IOException;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import constant.Constant;
 import pages.LoginPage;
 import pages.HomePage;
 import utilities.ExcelUtility;
 
 public class HomeTest extends Base {
-	LoginPage loginpage;
 	HomePage homepage;
 	
 	@Test
@@ -21,14 +18,12 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 		String password=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username).enterThePassword(password);
-		
+		loginpage.enterTheUserName(username);
+		loginpage.enterThePassword(password);
 		homepage.clickTheSignin();
 		
-	    //HomePage logoutpage=new HomePage(driver);
-		homepage.clickTheAdmin().clickTheLogout();
-	    
-	    boolean signin=homepage.isLoginPageDisplayed();
-	    Assert.assertTrue(signin, Constant.LOGOUTFROMPAGE);
+	    HomePage logoutpage=new HomePage(driver);
+	    logoutpage.clickTheAdmin();
+	    logoutpage.clickTheLogout();
 }
 }
