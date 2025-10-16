@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageContactPage {
 
-@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-contact']") WebElement moreinfo;
+//@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-contact']") WebElement moreinfo;
 @FindBy(xpath="//i[@class='fas fa-edit']") WebElement action;
 @FindBy(xpath="//input[@id='phone']") WebElement phone;
 @FindBy(xpath="//input[@id='email']") WebElement email;
@@ -23,44 +23,51 @@ public ManageContactPage(WebDriver driver)
 	this.driver=driver;
 	PageFactory.initElements(driver, this); //initialize webElements uses initElements method
 }
-public void clickThemoreinfo()
+/*public void clickThemoreinfo()
 {
 	moreinfo.click();
-}
-public void clickAction() 
+}*/
+public ManageContactPage clickAction() 
 {
 	action.click();
+	return this;
 }
-public void enterPhoneNumber(String phoneNumber)
+public ManageContactPage enterPhoneNumber(String phoneNumber)
 {
 	phone.clear();
 	phone.sendKeys(phoneNumber);
+	return this;
 }
-public void enterEmail(String Email)
+public ManageContactPage enterEmail(String Email)
 {
 	email.clear();
 	email.sendKeys(Email);
+	return this;
 }
-public void enterAddress(String Address)
+public ManageContactPage enterAddress(String Address)
 {
 	address.clear();
 	address.sendKeys(Address);
+	return this;
 }
-public void enterDeliveryTime(String DeliveryTime)
+public ManageContactPage enterDeliveryTime(String DeliveryTime)
 {
 	deliverytime.clear();
 	deliverytime.sendKeys(DeliveryTime);
+	return this;
 }
-public void enterDeliveryChargeLimit(String DeliveryChargeLimit)
+public ManageContactPage enterDeliveryChargeLimit(String DeliveryChargeLimit)
 {
 	deliverychargelimit.clear();
 	deliverychargelimit.sendKeys(DeliveryChargeLimit);
+	return this;
 }
-public void clickUpdate()
+public ManageContactPage clickUpdate()
 {
 	//update.click();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
     js.executeScript("arguments[0].click();", update);
+	return this;
 }
 public boolean isAlertLoaded()
 {

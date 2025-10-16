@@ -7,10 +7,13 @@ import org.testng.annotations.Test;
 
 import constant.Constant;
 import pages.LoginPage;
-import pages.LogoutPage;
+import pages.HomePage;
 import utilities.ExcelUtility;
 
-public class LogoutTest extends Base {
+public class HomeTest extends Base {
+	
+	HomePage homepage;
+	
 	@Test
 public void verifyTheUserIsAbleToLogout() throws IOException 
 {
@@ -18,13 +21,13 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 		String password=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignin();
+		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-	    LogoutPage logoutpage=new LogoutPage(driver);
-	    logoutpage.clickTheAdmin();
-	    logoutpage.clickTheLogout();
+		homepage.clickTheSignin();
+		
+	    HomePage logoutpage=new HomePage(driver);
+	    logoutpage.clickTheAdmin().clickTheLogout();
+	    
 	    boolean signin=logoutpage.isLoginPageDisplayed();
 	    Assert.assertTrue(signin, Constant.LOGOUTFROMPAGE);
 }

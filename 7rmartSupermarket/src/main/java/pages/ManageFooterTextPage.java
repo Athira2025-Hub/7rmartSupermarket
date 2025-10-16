@@ -21,34 +21,39 @@ public ManageFooterTextPage(WebDriver driver)
 	this.driver=driver;
 	PageFactory.initElements(driver, this); //initialize webElements uses initElements method
 }
-public void clickMoreinfo()
+/*public void clickMoreinfo()
 {
 	moreinfo.click();
-}
-public void clickTheActionButton()
+}*/
+public ManageFooterTextPage clickTheActionButton()
 {
 	action.click();
+	return this;
 }
-public void enterTheAddress(String Address)
+public ManageFooterTextPage enterTheAddress(String Address)
 {
 	address.clear();
 	address.sendKeys(Address);
+	return this;
 }
-public void enterTheEmail(String Email)
+public ManageFooterTextPage enterTheEmail(String Email)
 {
 	email.clear();
 	email.sendKeys(Email);
+	return this;
 }
-public void enterThePhoneNumber(String Phone)
+public ManageFooterTextPage enterThePhoneNumber(String Phone)
 {
 	phone.clear();
 	phone.sendKeys(Phone);
+	return this;
 }
-public void clickUpdate()
+public ManageFooterTextPage clickUpdate()
 {
 	WaitUtilities waitutilities=new WaitUtilities();
 	waitutilities.waitForElement(driver, update);
 	update.click();
+	return this;
 }
 public boolean isAlertLoaded()
 {

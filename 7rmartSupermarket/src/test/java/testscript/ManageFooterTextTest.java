@@ -6,11 +6,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import constant.Constant;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageFooterTextPage;
 import utilities.ExcelUtility;
 
 public class ManageFooterTextTest extends Base {
+	
+	ManageFooterTextPage managefootertextpage;
+	HomePage homepage;
+
+	
 	@Test
 	public void verifyUserCanUpdateFooterText() throws IOException
 	{
@@ -18,23 +24,21 @@ public class ManageFooterTextTest extends Base {
 		String password=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignin();
+		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		ManageFooterTextPage managerfootertextpage=new ManageFooterTextPage(driver);
-		managerfootertextpage.clickMoreinfo();
-		managerfootertextpage.clickTheActionButton();
+		homepage.clickTheSignin();
+		
+		//ManageFooterTextPage managerfootertextpage=new ManageFooterTextPage(driver);
+		homepage.clickMoreinfomanagefootertext();
+		managefootertextpage.clickTheActionButton();
 		
 		String Address=ExcelUtility.getStringData(1, 0, "ManageFooterText");
 		String Email=ExcelUtility.getStringData(1, 1, "ManageFooterText");
 		String Phone=ExcelUtility.getIntegerData(1, 2, "ManageFooterText");
 		
-		managerfootertextpage.enterTheAddress(Address);
-		managerfootertextpage.enterTheEmail(Email);
-		managerfootertextpage.enterThePhoneNumber(Phone);
-		managerfootertextpage.clickUpdate();
-		boolean alert=managerfootertextpage.isAlertLoaded();
+		managefootertextpage.enterTheAddress(Address).enterTheEmail(Email).enterThePhoneNumber(Phone).clickUpdate();
+		
+		boolean alert=managefootertextpage.isAlertLoaded();
 		Assert.assertTrue(alert,Constant.UPDATEFOOTER);
 	}
 }

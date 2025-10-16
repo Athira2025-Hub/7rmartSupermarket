@@ -7,10 +7,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import constant.Constant;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
+	
+	LoginPage loginpage;
+	HomePage homepage;
+	
 	@Test(groups="regression")
 	public void verifyTheUserisAbleToLoginWithValidCredentials() throws IOException
 	{
@@ -20,9 +25,9 @@ public class LoginTest extends Base {
 		String username=ExcelUtility.getStringData(1,0,"Loginpage");
 		String password=ExcelUtility.getStringData(1,1,"Loginpage");
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignin();
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		//loginpage.enterThePassword(password);
+		homepage.clickTheSignin();
 		boolean homepage=loginpage.isHomepageloaded(); //validation 
 		Assert.assertTrue(homepage,Constant.LOGINVALIDCREDENTIALS); //hard assertion put always last
 	}
@@ -34,9 +39,8 @@ public class LoginTest extends Base {
 		String username=ExcelUtility.getStringData(2, 0, "Loginpage");
 		String password=ExcelUtility.getStringData(2, 1, "Loginpage");
 	   LoginPage loginpage=new LoginPage(driver);
-	   loginpage.enterTheUserName(username);
-	   loginpage.enterThePassword(password);
-	   loginpage.clickTheSignin();
+	   loginpage.enterTheUserName(username).enterThePassword(password);
+	   homepage.clickTheSignin();
 	   boolean alert=loginpage.isAlertloaded();
 	   Assert.assertTrue(alert,Constant.INVALIDPASSWORD);
 	}
@@ -48,9 +52,9 @@ public class LoginTest extends Base {
 		String username=ExcelUtility.getStringData(3, 0, "Loginpage");
 		String password=ExcelUtility.getStringData(3, 1, "Loginpage");
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignin();
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		
+		homepage.clickTheSignin();
 		boolean alert=loginpage.isAlertloaded();
 		Assert.assertTrue(alert,Constant.INVALIDUSERNAME);	
 	}
@@ -62,9 +66,9 @@ public class LoginTest extends Base {
 		//String username=ExcelUtility.getStringData(4, 0, "Loginpage");
 		//String password=ExcelUtility.getStringData(4, 1, "Loginpage");
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignin();
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		
+		homepage.clickTheSignin();
 		boolean alert=loginpage.isAlertloaded();
 		Assert.assertTrue(alert,Constant.INVALIDCREDENTIALS);	
 	}

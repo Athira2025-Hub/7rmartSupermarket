@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class NewsPage {
-	@FindBy (css="a.small-box-footer[href$='/admin/list-news']") WebElement moreinfo;
+	//@FindBy (css="a.small-box-footer[href$='/admin/list-news']") WebElement moreinfo;
 	@FindBy(xpath="//a[@onclick='click_button(1)']") WebElement New;
 	@FindBy(xpath="//textarea[@placeholder='Enter the news']") WebElement EnterTheNews;
 	@FindBy(xpath="//button[text()='Save']") WebElement Save;
@@ -17,20 +17,23 @@ public NewsPage(WebDriver driver)
 	this.driver=driver;
 	PageFactory.initElements(driver, this); 
 }
-public void clickThemoreinfo()
+/*public void clickThemoreinfo()
 {
 	moreinfo.click();
-}
-public void clickNew() {
+}*/
+public NewsPage clickNew() {
 	New.click();
+	return this;
 }
-public void enterTheNews(String News)
+public NewsPage enterTheNews(String News)
 {
 	EnterTheNews.sendKeys(News);
+	return this;
 }
-public void clickTheSave()
+public NewsPage clickTheSave()
 {
 	Save.click();
+	return this;
 }
 public boolean isAlertLoaded()
 {
