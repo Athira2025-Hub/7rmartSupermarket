@@ -20,7 +20,7 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 		String username=ExcelUtility.getStringData(1, 0, "Loginpage");
 		String password=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
-		//LoginPage loginpage=new LoginPage(driver);
+		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
 		homepage.clickTheSignin();
