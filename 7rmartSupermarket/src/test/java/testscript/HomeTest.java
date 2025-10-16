@@ -25,10 +25,10 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 		
 		homepage.clickTheSignin();
 		
-	    HomePage logoutpage=new HomePage(driver);
-	    logoutpage.clickTheAdmin().clickTheLogout();
+	    //HomePage logoutpage=new HomePage(driver);
+		homepage.clickTheAdmin().clickTheLogout();
 	    
-	    boolean signin=logoutpage.isLoginPageDisplayed();
+	    boolean signin=homepage.isLoginPageDisplayed();
 	    Assert.assertTrue(signin, Constant.LOGOUTFROMPAGE);
 }
 }
