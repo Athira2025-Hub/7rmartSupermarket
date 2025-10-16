@@ -8,9 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 @FindBy(xpath="//a[@data-toggle='dropdown']") WebElement admin;
 @FindBy(css="a.dropdown-item[href='https://groceryapp.uniqassosiates.com/admin/logout']") WebElement logout;
-@FindBy(xpath="//button[text()='Sign In']")WebElement signin;
 
-@FindBy(xpath="//button[text()='Sign In']")WebElement loginsignin;
+@FindBy(xpath="//button[text()='Sign In']")WebElement signin;
 
 @FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-admin']") WebElement adminusermoreinfo;
 
@@ -31,7 +30,7 @@ public HomePage(WebDriver driver)
 
 public HomePage clickTheSignin()
 {
-	loginsignin.click();
+	signin.click();
 	return new HomePage(driver);
 }
 

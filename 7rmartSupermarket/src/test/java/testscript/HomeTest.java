@@ -18,12 +18,12 @@ public void verifyTheUserIsAbleToLogout() throws IOException
 		String password=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterTheUserName(username);
-		loginpage.enterThePassword(password);
+		loginpage.enterTheUserName(username).enterThePassword(password);
+		
 		homepage.clickTheSignin();
 		
-	    HomePage logoutpage=new HomePage(driver);
-	    logoutpage.clickTheAdmin();
-	    logoutpage.clickTheLogout();
+	    //HomePage logoutpage=new HomePage(driver);
+		homepage.clickTheAdmin();
+		homepage.clickTheLogout();
 }
 }
