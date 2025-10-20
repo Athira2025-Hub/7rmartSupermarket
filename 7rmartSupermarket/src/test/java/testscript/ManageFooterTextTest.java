@@ -26,7 +26,7 @@ public class ManageFooterTextTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		loginpage.clickTheSignin();
+		homepage=loginpage.clickTheSignin();
 		
 		//ManageFooterTextPage managerfootertextpage=new ManageFooterTextPage(driver);
 		managefootertextpage=homepage.clickMoreinfomanagefootertext();

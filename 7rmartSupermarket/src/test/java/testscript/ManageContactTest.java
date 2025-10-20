@@ -25,7 +25,7 @@ public void verifyTheUserIsAbleToManageContact() throws IOException
 	LoginPage loginpage=new LoginPage(driver);
 	loginpage.enterTheUserName(username).enterThePassword(password);
 	
-	loginpage.clickTheSignin();
+	homepage=loginpage.clickTheSignin();
 	
 	//ManageContactPage managecontactpage=new ManageContactPage(driver);
 	managecontactpage=homepage.clickThemoreinfomanagecontact();

@@ -25,7 +25,7 @@ public void verifyUserCanCreateNewCategory() throws IOException
 	LoginPage loginpage=new LoginPage(driver);
 	loginpage.enterTheUserName(username).enterThePassword(password);
 	
-	loginpage.clickTheSignin();
+	homepage=loginpage.clickTheSignin();
 	
 	//ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
 	managecategorypage=homepage.clickMoreinfomanagecategory();;
