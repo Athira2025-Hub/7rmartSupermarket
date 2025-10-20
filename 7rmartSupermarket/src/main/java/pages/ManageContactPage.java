@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class ManageContactPage {
 
 //@FindBy(css="a.small-box-footer[href='https://groceryapp.uniqassosiates.com/admin/list-contact']") WebElement moreinfo;
@@ -65,8 +67,10 @@ public ManageContactPage enterDeliveryChargeLimit(String DeliveryChargeLimit)
 public ManageContactPage clickUpdate()
 {
 	//update.click();
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-    js.executeScript("arguments[0].click();", update);
+	//JavascriptExecutor js = (JavascriptExecutor) driver;
+    //js.executeScript("arguments[0].click();", update);
+	PageUtility pageutility=new PageUtility();
+	pageutility.clickUpdate(update, update);
 	return this;
 }
 public boolean isAlertLoaded()
