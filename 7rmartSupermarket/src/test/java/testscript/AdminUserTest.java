@@ -26,7 +26,7 @@ public class AdminUserTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterTheUserName(username).enterThePassword(password);
 		
-		loginpage.clickTheSignin();
+		homepage=loginpage.clickTheSignin();
 		
 		//AdminUserPage adminuserpage=new AdminUserPage(driver);
 		adminuserpage=homepage.clickTheMoreinfoadminuser();
