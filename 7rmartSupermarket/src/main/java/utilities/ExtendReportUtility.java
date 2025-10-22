@@ -9,7 +9,7 @@ public class ExtendReportUtility {                                              
 	 	public synchronized static ExtentReports createExtentReports() { 
 	 		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html"); 
 	 		reporter.config().setReportName("7RMart  Project"); 
-	 		extentReports.attachReporter(reporter); //connect extend 
+	 		extentReports.attachReporter(reporter); //connect extends report and extend spark report
 	 		extentReports.setSystemInfo("Organization", "Obsqura"); 
 	 		extentReports.setSystemInfo("Name", "ATHIRA"); 
 	 		return extentReports; 

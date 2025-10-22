@@ -37,6 +37,6 @@ public void verifyUserCanCreateNewCategory() throws IOException
 	managecategorypage.chooseFileToUploadImage();
 	boolean save=managecategorypage.isSaveButtonClicked();
 	Assert.assertTrue(save,Constant.ADDCATEGORY);
-	System.out.println("Save Button Is displayed");
+	//System.out.println("Save Button Is displayed");
 }
 }
